@@ -6,10 +6,11 @@ import (
 	"os"
 )
 
-func main() {
+func main2() {
 	var s, sep string
 
-	for _, arg := r	 {
+	for i, arg := range os.Args[1:] {
+		fmt.Printf("Índice: %d | Argumento: %s\n", i, arg)
 		s += sep + arg
 		sep = " "
 	}

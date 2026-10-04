@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func main() {
+func main1() {
 	var s, sep string
 
 	for i := 0; i < len(os.Args); i++ {
@@ -15,5 +15,5 @@ func main() {
 	}
 
 	// fmt.Println(s)
-	fmt.Println(strings.Join(s[1:0]))
+	fmt.Println(s)
 }
