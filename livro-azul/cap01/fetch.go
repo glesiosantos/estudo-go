@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io"
 	"net/http"
 	"os"
 )
@@ -16,7 +15,7 @@ func main7() {
 			os.Exit(1)
 		}
 
-		b, err := io.ReadAll(resp.Body)
+		b, err := os.ReadFile()
 		resp.Body.Close()
 
 		if err != nil {
@@ -25,6 +24,5 @@ func main7() {
 		}
 
 		fmt.Printf("%s", b)
-
 	}
 }
